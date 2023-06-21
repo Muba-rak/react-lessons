@@ -1,0 +1,26 @@
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 12px;
+    background-color: white;
+    height: 100px;
+}
+
+.links ul{
+    display: flex;
+    gap: 10px;
+
+}
+.links ul li{
+    list-style-type: none;
+}
+.links ul li a{
+    text-decoration: none;
+}
+.links .btn{
+    background-color: red;
+    color: white;
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+}
