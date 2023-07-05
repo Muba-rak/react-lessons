@@ -22,3 +22,10 @@
     color: red;
     font-style: italic;
 }
+.okay{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+}

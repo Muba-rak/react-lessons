@@ -1,0 +1,61 @@
+.container{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 20px auto;
+}
+.pro{
+    text-align: center;
+    color: rgb(42, 165, 58);
+    font-size: 30px;
+    text-decoration: underline;
+}
+.card{
+    width: 400px;
+    height: auto;
+    border-radius: 10px;
+    background-color: rgb(26, 25, 25);
+    color: white;
+    padding: 10px;
+}
+.card img{
+    width: 100%;
+    object-fit: cover;
+    display: block;
+    margin: 5px auto;
+    border-radius: 10px;
+}
+.card h3{
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+.card h4{
+    font-size: 22px;
+    font-weight: 200;
+    margin-bottom: 0;
+    color: rgb(42, 165, 58);
+
+}
+.card button{
+    width: 127px;
+    height: 40px;
+    padding: 5px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    font-size: 16px;
+    font-weight: 300;
+    background-color: rgb(42, 165, 58);
+    color: white;
+}
+.categories {
+    text-align: center;
+}
+.adidas img, .nike img{
+    width: 200px;
+    height: 100px;
+    object-fit: cover;
+}
