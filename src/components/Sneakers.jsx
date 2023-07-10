@@ -1,32 +1,11 @@
 import React, { useState, useEffect } from "react";
 import "../styles/sneakers.css";
 import { InfinitySpin } from "react-loader-spinner";
-// template sneakers
-// loading state
-//CONDITION ? action1 : action2
-// cars- ola,
-// properioes - sheu, nike, uche
-//restaurants - mofe, zainab
-//crypto - toyin, precious, funsho
-// authors
-
-// loading 
-// template 
+import { useFetch } from "../hooks/useFetch";
 
 const Sneakers = () => {
   const url = "https://example-data.draftbit.com/sneakers?_limit=20";
-  const [products, setProducts] = useState([]);
-  const [isLoading, setIsLoading] = useState(true);
-
-  const fetchData = async () => {
-    const res = await fetch(url);
-    const data = await res.json();
-    setIsLoading(false);
-    setProducts(data);
-  };
-  useEffect(() => {
-    fetchData();
-  }, []);
+  const { isLoading, data: products } = useFetch(url);
 
   if (isLoading) {
     return <InfinitySpin width="200" color="#4fa94d" />;

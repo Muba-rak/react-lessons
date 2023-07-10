@@ -24,7 +24,6 @@ const Complexforms = () => {
     e.preventDefault();
     //do whatever action
     console.log(person);
-    console.log(mailing);
 
     if (mailing) {
       //add to mailing list
