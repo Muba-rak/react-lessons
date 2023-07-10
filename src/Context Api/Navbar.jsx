@@ -1,9 +1,12 @@
-import React, { useState, createContext } from "react";
+import React, { useState, createContext, useContext } from "react";
 import Navlinks from "./Navlinks";
+import { useGlobalContext } from "../hooks/context";
 // create a context - impor from react
 // provider , consumer
 
 export const NavbarContext = createContext();
+
+export const useNavbarContext = () => useContext(NavbarContext);
 
 const Navbar = () => {
   const [user, setUser] = useState({ name: "John" });
@@ -13,6 +16,7 @@ const Navbar = () => {
   const login = () => {
     setUser({ name: "John" });
   };
+  const { job } = useGlobalContext();
 
   return (
     <NavbarContext.Provider value={{ user, logout, login }}>

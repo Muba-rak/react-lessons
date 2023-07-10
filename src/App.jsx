@@ -5,19 +5,17 @@ import { createContext } from "react";
 import Complexforms from "./components/Complexforms";
 import Assignment from "./components/Assignment";
 import { useGlobalContext } from "./hooks/context";
-//
-// prop drilling
-
-// three components 1 2 3
-// context api
+import Banner from "./components/Banner";
 
 function App() {
-  const { num } = useGlobalContext();
-  console.log(num);
+  const { name, age, job, setJob } = useGlobalContext();
   return (
     <div className="container-lg m-auto">
       <div className="vh-100">
         <Navbar2 />
+        <Banner />
+        <h1> {job} </h1>
+        <button onClick={() => setJob("Trader")}> Change </button>
         <Assignment />
       </div>
     </div>

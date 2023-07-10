@@ -1,0 +1,180 @@
+Form 
+design 4 input fields- username 5, email valid, password 7, confirmpassword match
+<diV>
+    label: username
+    input name: username value= {user.username} onchnage= {handleChange}
+</div>
+controlled input
+const [user, setUser] = useState({
+    username: ''
+})
+const [usernameError, setUserError] = useState('')
+
+//handleChange
+const handleChange = ()=>{
+    setUser({...user, [e.target.name]: e.target.value})
+}
+
+// handle submit
+// validation
+const handleSubmit = (e)=>{
+    e.preventDefault()
+    let validationError = {}
+    if(user.username = ''){
+        setUserError('User name can not be empty')
+        validationError.username = ''
+    }
+    if(user.email === ''){
+
+    }
+    if(user.username.length < 5){
+        setUserError('User name can not be empty')
+    }
+    if(!user.email.includes('@')){
+        setEmailError('Invalid email address')
+    }
+    clear out yhe input fields
+    setUser({
+        email: '',
+        username: '',
+    })
+    clear error messages
+    setTimeout(()=>{
+        setEmailError('')
+        setErrors({})
+
+    }, 5000)
+}
+const [show, setShow] = useState(true)
+const toggleShow = ()=>{
+    setShow(!show)
+}
+
+<div class= form-field>
+    
+<input type= {show ? 'password': 'text'} /> 
+<button onClick= {toggleShow}> {show ? 'show': 'hide'} </button>
+</div>
+
+{
+    background: transparent
+    border: none
+    outline: none
+}
+input{
+    border: none
+    outline: none
+}
+
+
+// Books
+
+// useFetch 
+
+import usesTate, useEffcet
+
+export const useFetch = (url)=>{
+    const [loading, setLoading] = state(true)
+    const [data, setData] = state([])
+    const [error, setError] = state(false)
+
+    const fetchData = async ()=>{
+        try{
+            const res = await fetch(url)
+            const response = await res.json()
+            setLoading(false)
+            setError(false)
+            setData(response)
+        }catch(error){
+            setLoading(false)
+            setData(null)
+            setError(true)
+        }
+    }
+    useEfcet(()=>{
+        fetchData()
+    }, [])
+
+    return {data, loading, error}
+}
+
+// import uour use fetch
+
+const {data: books, loading} = useFetch('hhtps://example.draftsbit.com/books/?limit=20)
+
+if(loading){
+    retrun reat loader spinner
+}
+return data
+.green {
+    color: green
+}
+.gold{
+    color: gold
+}
+{
+    loading ? react spinner : {
+       sortedBooks.map((book)=>{
+            return <div key = {book.id}>
+                <h4 style= {{color: 'green'}}  className= {book.rating < 4 ? 'text-success' : 'text-warning'}> {book.rating} </h4>
+            </div>
+        })
+    }
+}
+
+// books=  [
+    {
+        id: 1,
+        title: 'Things fall apart'
+        authors: 'chinua achebe'
+        ratings: 3.9,
+        image: imag_url,
+        description: lorem
+    }
+]
+const cars = ['ford', 'Bmw', 'Totota'] = 
+.sort()
+
+const sortedBooks = data.sort((book, b)=>{
+    return book.localeCompare(b.name)
+})
+log(sortedBooks)
+<button onClick = {Fucntion}>Sort</button>
+
+const sortedBooks = books.map((book)=>{
+    return book.title.sort()
+})
+
+// Context API
+create A context 
+import{ createContext} from 'react
+
+export const Appcontext = createContext()
+//app.jsx
+<Appcontext.Provider value = {{var1, var2, function1, }}>
+    <App />
+</Appcontext.Provider>
+
+// books.jsx
+import Appcontext from '../'
+import {useContext} from 'react'
+
+const {var2} = useContext(Appcontext)
+
+
+
+//another components forms.jsx
+
+import Appcontext from '../'
+import {useContext} from 'react'
+
+const {var2, function1} = useContext(Appcontext)
+
+// componet 3 list.jsx var1, var 2
+import Appcontext from '../'
+import {useContext} from 'react'
+
+const {var1, var2} = useContext(Appcontext)
+
+use
+

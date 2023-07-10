@@ -44,19 +44,19 @@ const Assignment = () => {
     if (person.password !== person.confirmPassword) {
       setcpError("Password and confirm Password don't match");
     }
-
+    console.log(person);
     setPerson({
       username: "",
       email: "",
       password: "",
       confirmPassword: "",
     });
-    setTimeout(() => {
-      setUError("");
-      setEError("");
-      setPError("");
-      setcpError("");
-    }, 2000);
+    // setTimeout(() => {
+    //   setUError("");
+    //   setEError("");
+    //   setPError("");
+    //   setcpError("");
+    // }, 2000);
   };
   return (
     <div>
